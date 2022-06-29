@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var chelsea = {
+               "player" : "mount",
+               "coach" : "tuchel"
+            };
+            document.write("player: "+chelsea.player+"<br>");
+            document.write("coach: "+chelsea.coach+"<br>");
+            chelsea.ceo = "bohely";
+            document.write("ceo: "+chelsea.ceo+"<br>");
+            chelsea["ex CEO"] = "roman";
+            document.write("ex CEO: "+chelsea["ex CEO"]+"<br>");
+        </script>
+        <h2>Iterate</h2>
+        <script>
+        for (let key in chelsea) {
+            document.write(key+' : '+chelsea[key]+'<br>');
+          }
+        </script>
+        <h2>Property & Method</h2>
+        <script>
+            chelsea.showAll = function(){
+                for (let key in this) {
+                document.write(key+' : '+this[key]+'<br>');
+                }
+            }
+            chelsea.showAll();
+        </script>
+    </body>
+</html>
